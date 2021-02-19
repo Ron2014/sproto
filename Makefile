@@ -14,7 +14,7 @@ sproto.so : sproto.c lsproto.c
 	env gcc -O2 -Wall $(DLLFLAGS) -o $@ $^
 
 sproto.dll : sproto.c lsproto.c
-	gcc -O2 -Wall --shared -o $@ $^ -I/usr/local/include -L/usr/local/bin -llua53
+	gcc -O2 -Wall --shared -o $@ $^ -I/usr/local/include -L/usr/local/lib -llua
 
 clean :
 	rm -f sproto.so sproto.dll
